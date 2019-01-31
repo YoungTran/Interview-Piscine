@@ -1,0 +1,4 @@
+# Time Complexity: Linear search
+# Big O Notation: O(N)
+# Space Complexity: O(1)
+# Worst Case : O(N);

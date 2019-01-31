@@ -1,0 +1,42 @@
+#ifndef HEADER_H
+# define HEADER_H
+
+#include <stdio.h> //printf, scanf, ...
+#include <string.h> //memcpy, strlen, ...
+#include <unistd.h> //fork, write, sleep...
+#include <stdlib.h> //malloc, free, exit...
+/*--------------------------------
+  !! required structure
+  --------------------------------*/
+struct s_item {
+	int idx;
+	struct s_item *next;
+};
+
+struct s_stack {
+	struct s_item *item;
+};
+
+/*--------------------------------
+  :) function you must implement
+  --------------------------------*/
+struct s_stack *initStack();
+void push(struct s_stack *stack, int idx);
+int pop(struct s_stack *stack);
+
+char *console(void);
+
+/*--------------------------------
+  ?? test function used in main
+  --------------------------------*/
+
+
+/*--------------------------------
+  &  your own other function
+  --------------------------------*/
+int                 isEmpty(struct s_stack *stack);
+  int peek(struct s_stack *stack);
+
+typedef struct s_node t_node;
+typedef struct s_stack t_stack;
+#endif
